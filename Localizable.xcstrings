@@ -1,0 +1,912 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+
+    },
+    " " : {
+
+    },
+    " / %@" : {
+
+    },
+    "**Caloria** makes it easy and holds you accountable." : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Caloria** makes it easy and holds you accountable."
+          }
+        }
+      }
+    },
+    "**Caloria** was made for people like you" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "text in spanish"
+          }
+        }
+      }
+    },
+    "/%@" : {
+
+    },
+    "%.1f" : {
+
+    },
+    "%@ - %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ - %2$@"
+          }
+        }
+      }
+    },
+    "%@ by %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ by %2$@"
+          }
+        }
+      }
+    },
+    "%@ FREE, then %@/week" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ FREE, then %2$@/week"
+          }
+        }
+      }
+    },
+    "%@ per week" : {
+
+    },
+    "%lld" : {
+
+    },
+    "%lld days" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%llddias"
+          }
+        }
+      }
+    },
+    "%lld months" : {
+
+    },
+    "%lld weeks" : {
+
+    },
+    "%lld years" : {
+
+    },
+    "%lld/100" : {
+
+    },
+    "%lld%%" : {
+
+    },
+    "‣ %@" : {
+
+    },
+    "^[%lld day](inflect: true) FREE, then $19/month" : {
+
+    },
+    "+ 1000 **Caloria** People" : {
+
+    },
+    "🎁 Don't leave without a discount" : {
+
+    },
+    "🥹 Wait! Don't delete me!" : {
+
+    },
+    "1 Year" : {
+
+    },
+    "2 Wks Ago" : {
+
+    },
+    "3 Days" : {
+
+    },
+    "3 Months" : {
+
+    },
+    "3 Wks Ago" : {
+
+    },
+    "6 Months" : {
+
+    },
+    "7 Days" : {
+
+    },
+    "20-35% of your daily calories" : {
+
+    },
+    "30 days" : {
+
+    },
+    "45-65% of your daily calories" : {
+
+    },
+    "80% of Caloria AI users maintain their weight even 6 months later" : {
+
+    },
+    "80% of Caloria AI users maintain their weight gain even 6 months later" : {
+
+    },
+    "80% of Caloria AI users maintain their weight loss even 6 months later" : {
+
+    },
+    "90% of users say that the change is obvious after using **Caloria AI** and it is not easy to rebound." : {
+
+    },
+    "A few workouts per week" : {
+
+    },
+    "Add" : {
+
+    },
+    "Add an ingredient to **%@**" : {
+
+    },
+    "Add Ingredient" : {
+
+    },
+    "Add your measurements for BMI" : {
+
+    },
+    "Age affects metabolism and nutritional requirements" : {
+
+    },
+    "Age helps us tailor nutrition recommendations to you" : {
+
+    },
+    "Aim for 1.6-2.2g per kg of body weight" : {
+
+    },
+    "All done" : {
+
+    },
+    "All Time" : {
+
+    },
+    "and" : {
+
+    },
+    "Apply" : {
+
+    },
+    "Average calories" : {
+
+    },
+    "Bar Color" : {
+
+    },
+    "Based on your data, you can achieve amazing results" : {
+
+    },
+    "Be patient. Results will come in time!" : {
+
+    },
+    "Birthday" : {
+
+    },
+    "BMI (Body Mass Index) is a simple and widely used measure that assesses your weight in relation to your height." : {
+
+    },
+    "Boost my energy and mood" : {
+
+    },
+    "Bored with meal options" : {
+
+    },
+    "Breakfast" : {
+
+    },
+    "Build your strength naturally" : {
+
+    },
+    "Busy schedule" : {
+
+    },
+    "C" : {
+
+    },
+    "Caloria AI" : {
+
+    },
+    "Caloria has made it so easy to log my calories and track my progress. The AI recommendations are spot on, and the app's design is beautiful. Highly recommend!" : {
+
+    },
+    "Calories" : {
+
+    },
+    "Cancel" : {
+
+    },
+    "carb" : {
+
+    },
+    "Carbs" : {
+
+    },
+    "Changing your birthday might lead to a recalculation of your current plan." : {
+
+    },
+    "Changing your gender might lead to a recalculation of your current plan." : {
+
+    },
+    "Changing your height might lead to a recalculation of your current plan." : {
+
+    },
+    "Choose how fast you want to reach your goal" : {
+
+    },
+    "Choose your Gender" : {
+
+    },
+    "Choose your goal" : {
+
+    },
+    "Classic" : {
+
+    },
+    "Color your day! \nTap to find your perfect shade and make it pop." : {
+
+    },
+    "Coming Soon" : {
+
+    },
+    "Congratulations! \nYour custom wellness plan is ready." : {
+
+    },
+    "Continue" : {
+
+    },
+    "CREATE MY PLAN!" : {
+
+    },
+    "Current Weight **%@**" : {
+
+    },
+    "Daily recommendation" : {
+
+    },
+    "Date" : {
+
+    },
+    "day" : {
+
+    },
+    "Dedicated athlete" : {
+
+    },
+    "Delete" : {
+
+    },
+    "Describe a new ingredient" : {
+
+    },
+    "Describe your meal" : {
+
+    },
+    "Dinner" : {
+
+    },
+    "Discover your custom plan" : {
+
+    },
+    "Discover Your Plate’s Balance" : {
+
+    },
+    "Done" : {
+
+    },
+    "Eat and live healthier" : {
+
+    },
+    "Eat mindfully and take care of yourself!" : {
+
+    },
+    "Eaten" : {
+
+    },
+    "Essential for muscle growth and repair" : {
+
+    },
+    "Every balanced meal is an investment in your future." : {
+
+    },
+    "F" : {
+
+    },
+    "fat" : {
+
+    },
+    "Fat" : {
+
+    },
+    "Fats" : {
+
+    },
+    "Feel better about my body" : {
+
+    },
+    "Feel free to update these anytime in your profile." : {
+
+    },
+    "Female" : {
+
+    },
+    "Gain weight" : {
+
+    },
+    "Gaining" : {
+
+    },
+    "Gender" : {
+
+    },
+    "Generate" : {
+
+    },
+    "Get lean & healthy, step by step" : {
+
+    },
+    "Goal" : {
+
+    },
+    "Goal speed per week" : {
+
+    },
+    "Goal Weight **%@**" : {
+
+    },
+    "Grams" : {
+
+    },
+    "Health Score" : {
+
+    },
+    "Healthy" : {
+
+    },
+    "Height" : {
+
+    },
+    "Height is essential for determining your ideal nutritional balance" : {
+
+    },
+    "How tall are you?" : {
+
+    },
+    "I've been using Caloria for a few weeks now and love the easy calorie logging and AI-driven tips. The app's design is also very nice and intuitive." : {
+
+    },
+    "Imperial" : {
+
+    },
+    "Important for hormone production and nutrient absorption" : {
+
+    },
+    "Information" : {
+
+    },
+    "Information Sources" : {
+
+    },
+    "is a realistic target. \nIt's not hard at all!" : {
+
+    },
+    "It seems, you have no active subscriptions" : {
+
+    },
+    "It’s the perfect time to track your %@" : {
+
+    },
+    "Just a few quick steps to your perfect plan! You can always tweak it later." : {
+
+    },
+    "kcal" : {
+
+    },
+    "Keep your perfect balance" : {
+
+    },
+    "Lack of consistency" : {
+
+    },
+    "Lack of meal inspiration" : {
+
+    },
+    "Lack of support" : {
+
+    },
+    "Last 30 Days" : {
+
+    },
+    "Last 90 Days" : {
+
+    },
+    "Last Wk" : {
+
+    },
+    "Learn more >" : {
+
+    },
+    "Left" : {
+
+    },
+    "Let every meal be a step toward feeling your best!" : {
+
+    },
+    "Let's Begin" : {
+
+    },
+    "Let's color your experience" : {
+
+    },
+    "Let's create your personalized plan together! Don't worry - you can adjust everything later." : {
+
+    },
+    "Let's Get Started!" : {
+
+    },
+    "Let's make it happen together" : {
+
+    },
+    "Let's work together to reach your ideal weight" : {
+
+    },
+    "Limited time for health" : {
+
+    },
+    "Lose weight" : {
+
+    },
+    "Losing" : {
+
+    },
+    "Love using Caloria AI?" : {
+
+    },
+    "Lunch" : {
+
+    },
+    "Macronutrients" : {
+
+    },
+    "Macronutrients Distribution" : {
+
+    },
+    "Maintain" : {
+
+    },
+    "Male" : {
+
+    },
+    "MAYBE LATER" : {
+
+    },
+    "Measurement System" : {
+
+    },
+    "Metric" : {
+
+    },
+    "month" : {
+
+    },
+    "Month" : {
+
+    },
+    "Month 1" : {
+
+    },
+    "Month 6" : {
+
+    },
+    "Most Intaken" : {
+
+    },
+    "Name" : {
+
+    },
+    "No" : {
+
+    },
+    "No data yet" : {
+
+    },
+    "No encouragement from others" : {
+
+    },
+    "No purchases found" : {
+
+    },
+    "Not Sure?" : {
+
+    },
+    "Nutrition Details" : {
+
+    },
+    "Nutrition Insights" : {
+
+    },
+    "Obese" : {
+
+    },
+    "Ok" : {
+
+    },
+    "onboarding.loading.bmr" : {
+      "comment" : "Applying BMR formula..."
+    },
+    "onboarding.loading.finalizing" : {
+      "comment" : "Finalizing results..."
+    },
+    "onboarding.loading.metabolic_age" : {
+      "comment" : "Estimating your metabolic age..."
+    },
+    "Other" : {
+
+    },
+    "Overweight" : {
+
+    },
+    "P" : {
+
+    },
+    "Pescatarian" : {
+
+    },
+    "Pick today’s weight to keep your progress on track!" : {
+
+    },
+    "Pick your target weight" : {
+
+    },
+    "Please leave us feedback. Give us a second chance." : {
+
+    },
+    "Poor food choices" : {
+
+    },
+    "Prediction..." : {
+
+    },
+    "Primary energy source for your body" : {
+
+    },
+    "Privacy" : {
+
+    },
+    "Privacy Policy" : {
+
+    },
+    "Profile" : {
+
+    },
+    "prot" : {
+
+    },
+    "Protein" : {
+
+    },
+    "Proteins" : {
+
+    },
+    "Ready to Start Your Transformation?" : {
+
+    },
+    "Recognized correctly?" : {
+
+    },
+    "Recommended" : {
+
+    },
+    "Redeem Code" : {
+
+    },
+    "Remember to update this at least once a week so we can adjust your plan to hit your goal" : {
+
+    },
+    "Restore" : {
+
+    },
+    "Retry" : {
+
+    },
+    "SAVE" : {
+
+    },
+    "See My Goals" : {
+
+    },
+    "See what's possible with Caloria" : {
+
+    },
+    "Send" : {
+
+    },
+    "Set goals, but don’t forget to enjoy the journey!" : {
+
+    },
+    "Set your goal achievement rate" : {
+
+    },
+    "Set your target weight" : {
+
+    },
+    "Share your experience" : {
+
+    },
+    "Share your experience with meal recognition" : {
+
+    },
+    "Skip" : {
+
+    },
+    "Slow and Steady" : {
+
+    },
+    "Small steps every day lead to big changes!" : {
+
+    },
+    "Smart AI-Powered Plans for Long-Term Success" : {
+
+    },
+    "Snacks" : {
+
+    },
+    "Snap a photo or type a quick description of your meal, and we'll serve up all the nutrition details" : {
+
+    },
+    "Something went wrong!" : {
+
+    },
+    "Start logging to view stats" : {
+
+    },
+    "Start My Plan" : {
+
+    },
+    "Start your transformation journey" : {
+
+    },
+    "Stay motivated and consistent" : {
+
+    },
+    "Struggle to maintain routine" : {
+
+    },
+    "Success!" : {
+
+    },
+    "Take Photo" : {
+
+    },
+    "Tap here to generate your perfect meal plan" : {
+
+    },
+    "Tap to find your perfect shade and make it pop." : {
+
+    },
+    "Tap to get a special offer" : {
+
+    },
+    "Terms of Use" : {
+
+    },
+    "Thank you \nfor trusting us" : {
+
+    },
+    "Thanks for feedback" : {
+
+    },
+    "theme color" : {
+
+    },
+    "This helps calculate your ideal calorie intake" : {
+
+    },
+    "This helps us calculate your daily calorie targets" : {
+
+    },
+    "This helps us create a plan that's right for you" : {
+
+    },
+    "This plan is based on the following sources, along with other peer-reviewed medical studies:" : {
+
+    },
+    "This Week" : {
+
+    },
+    "Total calories" : {
+
+    },
+    "Track" : {
+
+    },
+    "Track Height" : {
+
+    },
+    "Track Weight" : {
+
+    },
+    "Track your progress from day one" : {
+
+    },
+    "Track your weight" : {
+
+    },
+    "Traditional Diet" : {
+
+    },
+    "Try your plan for free" : {
+
+    },
+    "Understanding BMI" : {
+
+    },
+    "Underweight" : {
+
+    },
+    "Unhealthy eating habits" : {
+
+    },
+    "Unlock \nall features" : {
+
+    },
+    "Update" : {
+
+    },
+    "Vegan" : {
+
+    },
+    "Vegetarian" : {
+
+    },
+    "Visualize your goal" : {
+
+    },
+    "We promise to always keep your personal information and secure" : {
+
+    },
+    "We value your opinion" : {
+
+    },
+    "We'll adjust your meal portions based on your activity level" : {
+
+    },
+    "We'll adjust your plan based on your activity level" : {
+
+    },
+    "We'll adjust your plan to match your preferred pace" : {
+
+    },
+    "We'll customize your journey based on your goals" : {
+
+    },
+    "We'll customize your meal plan to support your goals" : {
+
+    },
+    "week" : {
+
+    },
+    "Weight" : {
+
+    },
+    "Weight avg." : {
+
+    },
+    "Weight in grams" : {
+
+    },
+    "Weight Insights" : {
+
+    },
+    "Weight min." : {
+
+    },
+    "Welcome to Caloria AI" : {
+
+    },
+    "What is your target weight?" : {
+
+    },
+    "What's your current weight?" : {
+
+    },
+    "Workouts now and then" : {
+
+    },
+    "year" : {
+
+    },
+    "Yes" : {
+
+    },
+    "You have great potential to crush your goal" : {
+
+    },
+    "You may develop loose skin" : {
+
+    },
+    "Your age matters" : {
+
+    },
+    "Your data is always private and secure with us" : {
+
+    },
+    "Your data stays on your phone - we keep things private and secure!" : {
+
+    },
+    "Your feedback helps us improve for everyone" : {
+
+    },
+    "Your gender helps us calculate your daily caloric needs" : {
+
+    },
+    "Your health is your greatest wealth!" : {
+
+    },
+    "Your journey begins now" : {
+
+    },
+    "Your journey is private and secure - all data stays right on your phone." : {
+
+    },
+    "Your journey to success" : {
+
+    },
+    "Your Nutrition Trends Over Time" : {
+
+    },
+    "Your personalized meal plan is ready" : {
+
+    },
+    "Your personalized path to success" : {
+
+    },
+    "Your purchases have been restored" : {
+
+    },
+    "Your starting point for a healthier you" : {
+
+    },
+    "Your Statistics" : {
+
+    },
+    "Your Weight" : {
+
+    },
+    "Your weight is" : {
+
+    },
+    "Your Weight Transition" : {
+
+    },
+    "Your Weight Trends Over Time" : {
+
+    },
+    "Your workout routine" : {
+
+    }
+  },
+  "version" : "1.0"
+}
