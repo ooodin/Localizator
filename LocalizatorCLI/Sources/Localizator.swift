@@ -37,12 +37,12 @@ struct Localizator: AsyncParsableCommand {
             return
         }
         
-        try await Noora().progressStep(message: "Translation in progress...") { progress in
+        try await Noora().progressBarStep(message: "Translation progress") { progress in
             var completedCount = 0
             
             for (localizableSourceValue, localizableSourceString) in localizableSource.strings {
                 completedCount += 1
-                progress("Step: \(completedCount)/\(localizableSource.strings.count)")
+                progress(Double(completedCount) / Double(localizableSource.strings.count))
                 
                 if localizableSourceString.shouldTranslate == false ||
                     localizableSourceValue.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
