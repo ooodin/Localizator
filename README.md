@@ -62,35 +62,6 @@ Xcode 15+ can automatically extract localizable strings from your code and gener
 
 This will generate a `.xcstrings` file containing all localizable strings from your codebase when you build your app.
 
-### Enabling SwiftUI Text and String(localized:) Collection
-
-To automatically extract strings from SwiftUI `Text()` views and `String(localized:)`:
-
-1. Select your project file in Xcode
-2. Select the target you want to localize
-3. Go to "Build Settings" tab
-4. Search for "Localized String Macro Names" 
-5. Add `NSLocalizedString` and `CFCopyLocalizedString` to the list
-
-With this setting enabled, Xcode will automatically extract strings from:
-```swift
-Text("Hello World") // Extracted automatically
-let str = String(localized: "Hello World") // Extracted automatically
-```
-
-### Manually Generating a New String Catalog
-
-1. In Xcode, go to File > New > File
-2. Select "String Catalog" under "Resource"
-3. Name it "Localizable" (or your preferred name)
-4. Add it to your target(s)
-
-### Adding Strings to Your Catalog
-
-1. Open your `.xcstrings` file in Xcode
-2. Click the "+" button to add a new string
-3. Enter the string key and value
-
 ### Extracting Strings from Your Code
 
 Here are the modern Swift approaches to mark text for localization:
