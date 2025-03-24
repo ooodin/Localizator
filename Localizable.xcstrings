@@ -11,24 +11,10 @@
 
     },
     "**Caloria** makes it easy and holds you accountable." : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "**Caloria** makes it easy and holds you accountable."
-          }
-        }
-      }
+      
     },
     "**Caloria** was made for people like you" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "text in spanish"
-          }
-        }
-      }
+      
     }
   },
   "version" : "1.0"
