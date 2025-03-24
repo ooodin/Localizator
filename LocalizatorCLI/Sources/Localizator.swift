@@ -1,5 +1,5 @@
 import ArgumentParser
-import LokalizatorSDK
+import LocalizatorSDK
 import Noora
 
 @main
