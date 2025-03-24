@@ -43,7 +43,7 @@ swift run localizator <OpenAI_API_key> <file_path> <language_codes>
 
 ```bash
 # Localize a string catalog file to French, German, Spanish, and Japanese
-swift run localizator sk-1234yourOpenAIkeyABCD path/to/Localizable.xcstrings fr,de,es,jp
+swift run localizator sk-1234yourOpenAIkeyABCD path/to/Localizable.xcstrings fr de es jp
 ```
 
 ## Usage
@@ -93,7 +93,7 @@ Once you've created your string catalog and added your strings:
 swift run localizator <OpenAI_API_key> <file_path> <language_codes>
 
 # Example with multiple languages
-swift run localizator sk-yourapikey123 ./Localizable.xcstrings fr,de,es,jp
+swift run localizator sk-yourapikey123 ./Localizable.xcstrings fr de es jp
 ```
 
 The tool will automatically:
