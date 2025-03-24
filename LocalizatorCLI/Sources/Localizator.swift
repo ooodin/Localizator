@@ -19,6 +19,12 @@ struct Localizator: AsyncParsableCommand {
     private var languageCodes: [String]
     
     func run() async throws {
+        Noora().warning(
+            .alert("API Key: \(apiKey)"),
+            .alert("File path: \(filePath)"),
+            .alert("Target Languages: \(languageCodes.joined(separator: ", "))")
+        )
+        
         let network = Network(apiKey: apiKey)
         var localizableSource: Localizable
         
@@ -31,15 +37,19 @@ struct Localizator: AsyncParsableCommand {
             return
         }
         
-        try await Noora().progressBarStep(message: "Translation in progress...") { progress in
+        try await Noora().progressStep(message: "Translation in progress...") { progress in
             var completedCount = 0
             
             for (localizableSourceValue, localizableSourceString) in localizableSource.strings {
-                if localizableSourceString.shouldTranslate == false {
+                completedCount += 1
+                progress("Step: \(completedCount)/\(localizableSource.strings.count)")
+                
+                if localizableSourceString.shouldTranslate == false ||
+                    localizableSourceValue.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
                     continue
                 }
                 for languageCode in languageCodes {
-                    if let localization = localizableSourceString.localizations[languageCode], localization.stringUnit.state != .new {
+                    if let localization = localizableSourceString.localizations?[languageCode], localization.stringUnit.state != .new {
                         continue
                     }
                     let translation = Translation(
@@ -56,9 +66,6 @@ struct Localizator: AsyncParsableCommand {
                     )
                     localizableSource.strings[localizableSourceValue]?.localizations = localizations
                 }
-                
-                completedCount += 1
-                progress(Double(completedCount / localizableSource.strings.count))
             }
         }
                 

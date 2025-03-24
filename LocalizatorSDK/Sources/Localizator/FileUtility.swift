@@ -17,7 +17,10 @@ public enum FileUtility {
     }
 
     public static func writeLocalizableFile(data: Localizable, at path: String) throws {
-        let fileData = try JSONEncoder().encode(data)
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = .prettyPrinted
+        
+        let fileData = try encoder.encode(data)
         try fileData.write(to: URL(fileURLWithPath: path))
     }
 }

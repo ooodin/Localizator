@@ -11,7 +11,7 @@ public struct Localizable: Codable {
     public struct StringData: Codable {
         public let comment: String?
         public let shouldTranslate: Bool?
-        public var localizations: [String: Localization]
+        public var localizations: [String: Localization]?
         
         public struct Localization: Codable {
             public let stringUnit: StringUnit

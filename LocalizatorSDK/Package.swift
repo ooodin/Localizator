@@ -21,7 +21,8 @@ let package = Package(
             name: "LocalizatorSDK",
             dependencies: [
                 .product(name: "ChatGPTSwift", package: "ChatGPTSwift")
-            ]
+            ],
+            path: "Sources/Localizator"
         ),
         .testTarget(
             name: "LocalizatorSDKTests",
