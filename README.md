@@ -86,31 +86,6 @@ let message = String(localized: "Hello, World!")
 let formatted = String(localized: "Hello, \(username)")
 ```
 
-#### 3. Exporting Strings for Translation
-
-To extract all localizable strings from your project:
-
-1. Select your project in Xcode
-2. Choose Product > Export Localizations
-3. Choose your source language and click Export
-4. Xcode will generate a `.xcloc` package with all your localizable strings
-
-#### 4. Importing Translated Strings
-
-After translation:
-
-1. Select your project in Xcode
-2. Choose Product > Import Localizations
-3. Select the translated `.xcloc` package
-4. Review the changes and click Import
-
-### Adding New Languages
-
-1. In Xcode, select your project file
-2. Go to "Info" > "Localizations"
-3. Click "+" to add supported languages
-4. Select the resources to localize
-
 ### Localizing with Localizator
 
 Once you've created your string catalog and added your strings:
