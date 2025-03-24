@@ -32,7 +32,7 @@ Apple's string catalog (`.xcstrings`) approach offers several advantages over tr
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/Localizator.git
+git clone https://github.com/ooodin/Localizator.git
 cd Localizator
 
 # Run using Swift
