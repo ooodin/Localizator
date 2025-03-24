@@ -6,7 +6,7 @@ A tool for simplifying iOS app localization with `.xcstrings` string catalogs.
 
 Localizator helps iOS developers efficiently manage and localize their applications using Apple's modern string catalog approach. With Localizator, you can:
 
-- Generate `.xcstrings` files from your codebase
+- Generate translations for your `.xcstrings` files using OpenAI
 - Manage translations across multiple languages
 - Streamline the localization workflow
 
@@ -48,21 +48,44 @@ swift run localizator sk-1234yourOpenAIkeyABCD path/to/Localizable.xcstrings fr 
 
 ## Usage
 
-### Generating a New String Catalog
+### Setting Up Automatic String Catalog Generation in Xcode
+
+Xcode 15+ can automatically extract localizable strings from your code and generate a string catalog:
+
+1. Select your project file in Xcode
+2. Select the target you want to localize
+3. Go to "Build Settings" tab
+4. Search for "string catalog"
+5. Configure these settings:
+   - Set "Generate String Catalog during Build" to "Yes"
+   - Set "String Catalog Output Directory" to your preferred location (e.g., `$(DERIVED_FILE_DIR)`)
+   - Set "String Catalog Input Directories" to include source directories (e.g., `$(PROJECT_DIR)/MyApp`)
+   - Set "Localized String Macro Names" to include `NSLocalizedString`, `CFCopyLocalizedString` and any other macros you use
+
+This will generate a `.xcstrings` file containing all localizable strings from your codebase when you build your app.
+
+### Enabling SwiftUI Text and String(localized:) Collection
+
+To automatically extract strings from SwiftUI `Text()` views and `String(localized:)`:
+
+1. Select your project file in Xcode
+2. Select the target you want to localize
+3. Go to "Build Settings" tab
+4. Search for "Localized String Macro Names" 
+5. Add `NSLocalizedString` and `CFCopyLocalizedString` to the list
+
+With this setting enabled, Xcode will automatically extract strings from:
+```swift
+Text("Hello World") // Extracted automatically
+let str = String(localized: "Hello World") // Extracted automatically
+```
+
+### Manually Generating a New String Catalog
 
 1. In Xcode, go to File > New > File
 2. Select "String Catalog" under "Resource"
 3. Name it "Localizable" (or your preferred name)
 4. Add it to your target(s)
-
-### Finding Strings to Localize
-
-Scan your project for localizable strings:
-
-```bash
-# Example command
-./localizator scan --project YourProject.xcodeproj --output strings_to_localize.json
-```
 
 ### Adding Strings to Your Catalog
 
@@ -70,12 +93,47 @@ Scan your project for localizable strings:
 2. Click the "+" button to add a new string
 3. Enter the string key and value
 
-Or use Localizator to batch-add strings:
+### Extracting Strings from Your Code
 
-```bash
-# Example command
-./localizator import --input strings_to_localize.json --catalog path/to/Localizable.xcstrings
+Here are the modern Swift approaches to mark text for localization:
+
+#### 1. Using SwiftUI Text Views
+
+```swift
+// Simple text will be automatically extracted
+Text("Hello, World!")
+
+// String with interpolation
+Text("Hello, \(name)")
 ```
+
+#### 2. Using String(localized:)
+
+```swift
+// Basic usage
+let message = String(localized: "Hello, World!")
+
+// With format
+let formatted = String(localized: "Hello, \(username)")
+```
+
+#### 3. Exporting Strings for Translation
+
+To extract all localizable strings from your project:
+
+1. Select your project in Xcode
+2. Choose Product > Export Localizations
+3. Choose your source language and click Export
+4. Xcode will generate a `.xcloc` package with all your localizable strings
+
+#### 4. Importing Translated Strings
+
+After translation:
+
+1. Select your project in Xcode
+2. Choose Product > Import Localizations
+3. Select the translated `.xcloc` package
+4. Review the changes and click Import
 
 ### Adding New Languages
 
@@ -137,8 +195,8 @@ A typical `.xcstrings` file structure looks like:
 String catalogs support variations for different contexts:
 
 ```swift
-// In code
-Text("Welcome \(username)", tableName: nil)
+// Basic string with format specifier
+let greeting = String(localized: "Welcome \(username)")
 
 // In Localizable.xcstrings
 "Welcome %@" : {
@@ -164,15 +222,18 @@ Text("Welcome \(username)", tableName: nil)
 String catalogs support markdown formatting:
 
 ```swift
-// In code
-Text("**Bold** and *italic* text", tableName: nil)
+// In code - markdown is preserved across translations
+let message = String(localized: "**Bold** and *italic* text")
 
-// In Localizable.xcstrings with preserved formatting across languages
+// In SwiftUI
+Text("**Bold** and *italic* text")
 ```
 
 ## Resources
 
-- [Apple Documentation: Localizing with String Catalogs](https://developer.apple.com/documentation/xcode/localizing-and-varying-text-with-a-string-catalog)
+- [Apple Documentation: Localization](https://developer.apple.com/documentation/Xcode/localization)
+- [Apple Documentation: Localizing with String Catalogs](https://developer.apple.com/documentation/xcode/localizing-and-varying-text-with-a-string-catalog#Localize-your-apps-text)
+- [Apple Documentation: Exporting Localizations](https://developer.apple.com/documentation/xcode/exporting-localizations)
 - [WWDC23: Internationalize your app](https://developer.apple.com/videos/play/wwdc2023/10155/)
 
 ## Contributing
@@ -181,4 +242,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details. 
+This project is licensed under the MIT License - see the LICENSE file for details.
