@@ -1,21 +1,95 @@
 {
-  "sourceLanguage" : "en",
   "strings" : {
-    "" : {
-
+    " \/ %@" : {
+      "localizations" : {
+        "jp" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "\/ %@"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "\/ %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "\/ %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "value" : "\/ %@",
+            "state" : "needs_review"
+          }
+        }
+      }
     },
     " " : {
 
     },
-    " / %@" : {
+    "**Caloria** was made for people like you" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "**Caloria** a été créé pour des gens comme vous"
+          }
+        },
+        "jp" : {
+          "stringUnit" : {
+            "value" : "**カロリア**はあなたのような人のために作られました",
+            "state" : "needs_review"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "**Caloria** fue creado para personas como tú"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "**Caloria** wurde für Menschen wie dich gemacht"
+          }
+        }
+      }
+    },
+    "" : {
 
     },
     "**Caloria** makes it easy and holds you accountable." : {
-      
-    },
-    "**Caloria** was made for people like you" : {
-      
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "value" : "**Caloria** macht es einfach und macht dich verantwortlich.",
+            "state" : "needs_review"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "value" : "**Caloria** hace que sea fácil y te hace responsable.",
+            "state" : "needs_review"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "**Caloria** facilite les choses et vous rend responsable."
+          }
+        },
+        "jp" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "**カロリア**は簡単で、あなたを責任感で支えます。"
+          }
+        }
+      }
     }
   },
-  "version" : "1.0"
+  "sourceLanguage" : "en"
 }
