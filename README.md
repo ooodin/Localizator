@@ -58,8 +58,6 @@ Xcode 15+ can automatically extract localizable strings from your code and gener
 4. Search for "string catalog"
 5. Configure these settings:
    - Set "Generate String Catalog during Build" to "Yes"
-   - Set "String Catalog Output Directory" to your preferred location (e.g., `$(DERIVED_FILE_DIR)`)
-   - Set "String Catalog Input Directories" to include source directories (e.g., `$(PROJECT_DIR)/MyApp`)
    - Set "Localized String Macro Names" to include `NSLocalizedString`, `CFCopyLocalizedString` and any other macros you use
 
 This will generate a `.xcstrings` file containing all localizable strings from your codebase when you build your app.
