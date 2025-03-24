@@ -26,6 +26,7 @@ Apple's string catalog (`.xcstrings`) approach offers several advantages over tr
 - Xcode 15 or newer
 - macOS Ventura or newer
 - Your iOS project
+- OpenAI API key
 
 ### Installation
 
@@ -34,8 +35,15 @@ Apple's string catalog (`.xcstrings`) approach offers several advantages over tr
 git clone https://github.com/yourusername/Localizator.git
 cd Localizator
 
-# Install dependencies (if applicable)
-# ...
+# Run using Swift
+swift run localizator <OpenAI_API_key> <file_path> <language_codes>
+```
+
+### Example Usage
+
+```bash
+# Localize a string catalog file to French, German, Spanish, and Japanese
+swift run localizator sk-1234yourOpenAIkeyABCD path/to/Localizable.xcstrings fr,de,es,jp
 ```
 
 ## Usage
@@ -76,15 +84,23 @@ Or use Localizator to batch-add strings:
 3. Click "+" to add supported languages
 4. Select the resources to localize
 
-### Managing Translations with Localizator
+### Localizing with Localizator
+
+Once you've created your string catalog and added your strings:
 
 ```bash
-# Export for translation
-./localizator export --catalog path/to/Localizable.xcstrings --output translations.xlsx
+# Run the localization process
+swift run localizator <OpenAI_API_key> <file_path> <language_codes>
 
-# Import completed translations
-./localizator import --translations translations.xlsx --catalog path/to/Localizable.xcstrings
+# Example with multiple languages
+swift run localizator sk-yourapikey123 ./Localizable.xcstrings fr,de,es,jp
 ```
+
+The tool will automatically:
+1. Parse your string catalog
+2. Identify untranslated strings
+3. Generate translations using OpenAI
+4. Update your string catalog with the translated content
 
 ## Example Structure
 
