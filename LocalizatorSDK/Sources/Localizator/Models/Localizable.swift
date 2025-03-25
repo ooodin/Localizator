@@ -6,6 +6,7 @@ public typealias StringUnit = Localizable.StringData.StringUnit
 
 public struct Localizable: Codable {
     public let sourceLanguage: String
+    public let version: String
     public var strings: [String: StringData]
     
     public struct StringData: Codable {
