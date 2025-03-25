@@ -49,7 +49,7 @@ struct Localizator: AsyncParsableCommand {
                     continue
                 }
                 for languageCode in languageCodes {
-                    if let localization = localizableSourceString.localizations?[languageCode], localization.stringUnit.state != .new {
+                    if let stringUnit = localizableSourceString.localizations?[languageCode]?.stringUnit, stringUnit.state != .new {
                         continue
                     }
                     let translation = Translation(

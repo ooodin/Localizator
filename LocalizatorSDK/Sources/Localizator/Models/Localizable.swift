@@ -15,7 +15,7 @@ public struct Localizable: Codable {
         public var localizations: [String: Localization]?
         
         public struct Localization: Codable {
-            public let stringUnit: StringUnit
+            public let stringUnit: StringUnit?
             
             public init(stringUnit: StringUnit) {
                 self.stringUnit = stringUnit
