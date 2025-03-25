@@ -64,6 +64,9 @@ struct Localizator: AsyncParsableCommand {
                     localizations[languageCode] = Localization(
                         stringUnit: .init(state: .needsReview, value: translatedText)
                     )
+                    localizations[localizableSource.sourceLanguage] = Localization(
+                        stringUnit: .init(state: .translated, value: localizableSourceValue)
+                    )
                     localizableSource.strings[localizableSourceValue]?.localizations = localizations
                 }
             }
