@@ -58,7 +58,16 @@ struct Localizator: AsyncParsableCommand {
                         sourceText: localizableSourceValue,
                         comment: localizableSourceString.comment
                     )
-                    let translatedText = try await network.request(translation: translation)
+                    let translatedText: String
+                    
+                    do {
+                        translatedText = try await network.request(translation: translation)
+                    } catch {
+                        Noora().warning(
+                            .alert("Translation key '\(localizableSourceValue)' fetch failure - \(error.localizedDescription)")
+                        )
+                        continue
+                    }
                     var localizations = localizableSource.strings[localizableSourceValue]?.localizations ?? [:]
                     
                     localizations[languageCode] = Localization(
