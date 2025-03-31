@@ -14,13 +14,15 @@ let package = Package(
             targets: ["LocalizatorSDK"]),
     ],
     dependencies: [
+        .package(url: "https://github.com/tuist/Noora", .upToNextMajor(from: "0.17.0")),
         .package(url: "https://github.com/ooodin/ChatGPTSwift", branch: "main")
     ],
     targets: [
         .target(
             name: "LocalizatorSDK",
             dependencies: [
-                .product(name: "ChatGPTSwift", package: "ChatGPTSwift")
+                .product(name: "ChatGPTSwift", package: "ChatGPTSwift"),
+                .product(name: "Noora", package: "Noora"),
             ],
             path: "Sources/Localizator"
         ),

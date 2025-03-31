@@ -1,12 +1,12 @@
 import Foundation
 
-public enum FileUtilityError: Error {
+enum FileUtilityError: Error {
     case fileIsNotExist
     case fileIsEmpty
 }
 
-public enum FileUtility {
-    public static func readLocalizableFile(path: String) throws -> Localizable {
+enum FileUtility {
+    static func readLocalizableFile(path: String) throws -> Localizable {
         guard FileManager.default.fileExists(atPath: path) else {
             throw FileUtilityError.fileIsNotExist
         }
@@ -16,7 +16,7 @@ public enum FileUtility {
         return try JSONDecoder().decode(Localizable.self, from: fileData)
     }
 
-    public static func writeLocalizableFile(data: Localizable, at path: String) throws {
+    static func writeLocalizableFile(data: Localizable, at path: String) throws {
         let encoder = JSONEncoder()
         encoder.outputFormatting = .prettyPrinted
         

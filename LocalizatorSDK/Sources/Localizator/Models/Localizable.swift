@@ -1,36 +1,36 @@
 import Foundation
 
-public typealias Localization = Localizable.StringData.Localization
-public typealias StringData = Localizable.StringData
-public typealias StringUnit = Localizable.StringData.StringUnit
+typealias Localization = Localizable.StringData.Localization
+typealias StringData = Localizable.StringData
+typealias StringUnit = Localizable.StringData.StringUnit
 
-public struct Localizable: Codable {
-    public let sourceLanguage: String
-    public let version: String
-    public var strings: [String: StringData]
+struct Localizable: Codable {
+    let sourceLanguage: String
+    let version: String
+    var strings: [String: StringData]
     
-    public struct StringData: Codable {
-        public let comment: String?
-        public let shouldTranslate: Bool?
-        public var localizations: [String: Localization]?
+    struct StringData: Codable {
+        let comment: String?
+        let shouldTranslate: Bool?
+        var localizations: [String: Localization]?
         
-        public struct Localization: Codable {
-            public let stringUnit: StringUnit?
+        struct Localization: Codable {
+            let stringUnit: StringUnit?
             
-            public init(stringUnit: StringUnit) {
+            init(stringUnit: StringUnit) {
                 self.stringUnit = stringUnit
             }
         }
-        public struct StringUnit: Codable {
-            public enum Strate: String, Codable {
+        struct StringUnit: Codable {
+            enum Strate: String, Codable {
                 case new
                 case needsReview = "needs_review"
                 case translated
             }
-            public let state: Strate
-            public let value: String
+            let state: Strate
+            let value: String
             
-            public init(state: Strate, value: String) {
+            init(state: Strate, value: String) {
                 self.state = state
                 self.value = value
             }
