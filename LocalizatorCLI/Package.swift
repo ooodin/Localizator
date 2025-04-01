@@ -24,8 +24,8 @@ let package = Package(
             name: "localizator",
             dependencies: [
                 .product(name: "LocalizatorSDK", package: "LocalizatorSDK"),
-                .product(name: "ArgumentParser", package: "swift-argument-parser"),
                 .product(name: "Noora", package: "Noora"),
+                .product(name: "ArgumentParser", package: "swift-argument-parser"),
             ]
         )
     ]

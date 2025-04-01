@@ -1,17 +1,17 @@
 import Foundation
 import ChatGPTSwift
 
-public final class Network {
+final class Network: Sendable {
     private let apiService: ChatGPTAPI
     
-    public init(apiKey: String) {
+    init(apiKey: String) {
         self.apiService = ChatGPTAPI(
             apiUrl: ApiParameters.ChatParameters.apiUrl,
             apiKey: apiKey
         )
     }
     
-    public func request(translation: Translation) async throws -> String {
+    func request(translation: Translation) async throws -> String {
         apiService.replaceHistoryList(with: [
             .init(role: "user", content: translation.instructions)
         ])
