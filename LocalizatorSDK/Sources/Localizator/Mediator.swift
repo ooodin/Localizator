@@ -4,8 +4,6 @@ public final class Mediator {
     public enum ProgressEvent {
         case progress(current: Int, total: Int)
         case warning(message: String)
-        case failure(message: String)
-        case finished
     }
     
     let network: Network
@@ -14,27 +12,22 @@ public final class Mediator {
         network = Network(apiKey: apiKey)
     }
     
-    public func run(
+    public func localize(
         filePath: String,
         languageCodes: [String]
-    ) async throws -> AsyncStream<ProgressEvent> {
-        
-        AsyncStream { continuation in
+    ) -> AsyncThrowingStream<ProgressEvent, any Error> {
+        AsyncThrowingStream { [network] continuation in
             Task {
                 var localizableSource: Localizable
                 
                 do {
                     localizableSource = try FileUtility.readLocalizableFile(path: filePath)
                 } catch {
-                    continuation.yield(.failure(message: "File read failure - \(error.localizedDescription)"))
-                    continuation.finish()
+                    continuation.finish(throwing: error)
                     return
                 }
                                 
                 for (index, (localizableSourceValue, localizableSourceString)) in localizableSource.strings.enumerated() {
-                    completedCount += 1
-                    progress(Double(completedCount) / Double(localizableSource.strings.count))
-                    
                     continuation.yield(.progress(current: index, total: localizableSource.strings.count))
                     
                     if localizableSourceString.shouldTranslate == false ||
@@ -56,9 +49,7 @@ public final class Mediator {
                         do {
                             translatedText = try await network.request(translation: translation)
                         } catch {
-                            Noora().warning(
-                                .alert("Translation key '\(localizableSourceValue)' fetch failure - \(error.localizedDescription)")
-                            )
+                            continuation.yield(.warning(message: "Translation key '\(localizableSourceValue)' fetch failure - \(error.localizedDescription)"))
                             continue
                         }
                         var localizations = localizableSource.strings[localizableSourceValue]?.localizations ?? [:]
@@ -73,20 +64,13 @@ public final class Mediator {
                     }
                 }
                 
-                try await Noora().progressBarStep(message: "Translation progress") { progress in
-                    
-                }
-                        
                 do {
                     try FileUtility.writeLocalizableFile(data: localizableSource, at: filePath)
+                    continuation.finish()
                 } catch {
-                    Noora().error(
-                        .alert("File write failure - \(error.localizedDescription)")
-                    )
-                    return
+                    continuation.finish(throwing: error)
                 }
             }
-
         }
     }
 }

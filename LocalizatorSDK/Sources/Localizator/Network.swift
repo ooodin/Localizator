@@ -1,7 +1,7 @@
 import Foundation
 import ChatGPTSwift
 
-final class Network {
+final class Network: Sendable {
     private let apiService: ChatGPTAPI
     
     init(apiKey: String) {
